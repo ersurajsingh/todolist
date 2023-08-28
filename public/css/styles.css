@@ -72,3 +72,20 @@ button:hover {
     background-color: #52c1dc;
     color: #e5e8e8;
 }
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    color: #e06c75;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.delete-btn:hover {
+    color: #be5051;
+}
+
+.item p {
+    transition: text-decoration 0.3s;
+}

@@ -20,6 +20,12 @@ app.post("/",function(req,res){
     res.redirect("/");
 });
 
+app.post("/delete", function(req, res){
+    var indexToDelete = req.body.itemToDelete;
+    items.splice(indexToDelete, 1);
+    res.redirect("/");
+});
+
 app.listen(8000,function(){
     console.log("Server Started");
 });

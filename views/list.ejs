@@ -10,17 +10,34 @@
         </div>
         <div class="box">
             <% for(var i=0 ; i< ejes.length ; i++){%>
-            <div class="item">
-                <input type="checkbox">
-                <p><%= ejes[i] %></p>
-            </div>              
-      
-            <% }%>                   
+                <div class="item">
+                    <input type="checkbox" id="task_<%= i %>" onclick="toggleStrike(this)">
+                    <p id="text_<%= i %>"><%= ejes[i] %></p>
+                    <form action="/delete" method="post" style="display: inline;">
+                        <input type="hidden" name="itemToDelete" value="<%= i %>">
+                        <button type="submit" class="delete-btn">X</button>
+                    </form>
+                </div>              
+            <% }%>
+
+            
+                            
 
             <form action="/" method="POST">
                 <input type="text" name="ele1" placeholder="Enter the Task">
                 <button type="submit">+</button>
             </form>
         </div>
+        <script>
+            function toggleStrike(checkbox) {
+                const textElement = document.getElementById('text_' + checkbox.id.split('_')[1]);
+                if (checkbox.checked) {
+                    textElement.style.textDecoration = 'line-through';
+                } else {
+                    textElement.style.textDecoration = 'none';
+                }
+            }
+        </script>
+        
     </body>
 </html>
