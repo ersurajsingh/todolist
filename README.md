@@ -62,10 +62,3 @@ http://localhost:8000/
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
----
-
-Make sure to replace placeholder links, usernames, and paths with appropriate values. It's also recommended to have an actual screenshot of your application to provide a visual representation.
